@@ -159,6 +159,22 @@ namespace ExamMvc.Data
                 Topic = "Razor Syntax and Dynamic Rendering",
                 Explanation = "Navigation properties let EF Core traverse from one entity to its related entity in code."
             });
+            Add(new Question
+            {
+                Number = 10,
+                Text = "What does .Include() generally allow EF Core to do?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "Delete the Section table",
+                        ["B"] = "Load related Section data together with Students",
+                        ["C"] = "Create a new Student",
+                        ["D"] = "Validate Student input"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "Razor Syntax and Dynamic Rendering",
+                Explanation = "Include() eagerly loads a related navigation property in the same query."
+            });
             // SEED_MARKER
         }
 
