@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IT Elective 2 – Prefinal Exam (MVC Answer Sheet)
 
 **Esguerra, Ma. Corolla** &nbsp;|&nbsp; BSIT-3.1E3 &nbsp;|&nbsp; IT Elective 2 – Web System and Technologies
@@ -55,3 +56,6 @@ bar, or straight to `/Exam`.
 Each of the 20 exam items was added as its own commit
 (`Add Item N - <topic>`), on top of an initial commit that scaffolds the
 MVC project (models, controllers, views, styling).
+=======
+# -IT_ELECTIVE_2_BSIT31E3_PREFINAL_EXAM_ESGUERRA_MA.-COROLLA
+>>>>>>> e364136d2300620a56bded858a97445f6b3ce553
