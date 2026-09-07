@@ -15,6 +15,23 @@ namespace ExamMvc.Data
         public QuestionRepository()
         {
             // Items are seeded below, one per exam number.
+            Add(new Question
+            {
+                Number = 1,
+                Text = "What is the main problem solved by using a database instead of an in-memory collection?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "It makes C# code shorter",
+                        ["B"] = "It prevents the application from restarting",
+                        ["C"] = "It allows data to persist after the application stops",
+                        ["D"] = "It removes the need for MVC"
+                },
+                SelectedAnswer = "C",
+                CorrectAnswer = "C",
+                Topic = "Relational Data Modeling",
+                Explanation = "In-memory collections disappear when the app stops; a database keeps the data around after that."
+            });
+            // SEED_MARKER
         }
 
         public IReadOnlyList<Question> GetAll() => _questions.OrderBy(q => q.Number).ToList();
