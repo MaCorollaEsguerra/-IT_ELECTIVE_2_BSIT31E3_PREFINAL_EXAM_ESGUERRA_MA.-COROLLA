@@ -191,6 +191,22 @@ namespace ExamMvc.Data
                 Topic = "Data Normalization & Structural Integrity",
                 Explanation = "A ViewModel tailors/combines entity data into exactly the shape a view needs, nothing more."
             });
+            Add(new Question
+            {
+                Number = 12,
+                Text = "Consider this query:\n\nvar students = _context.Students.Include(s => s.Section).ToList();\n\nWhat is the main benefit of Include(s => s.Section)?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "It loads the related Section navigation property",
+                        ["B"] = "It creates a Section object manually",
+                        ["C"] = "It removes the foreign key",
+                        ["D"] = "It prevents the query from accessing the database"
+                },
+                SelectedAnswer = "A",
+                CorrectAnswer = "A",
+                Topic = "Data Normalization & Structural Integrity",
+                Explanation = "Include(s => s.Section) tells EF Core to eager-load each Student's related Section in the same query."
+            });
             // SEED_MARKER
         }
 
