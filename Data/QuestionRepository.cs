@@ -335,7 +335,6 @@ namespace ExamMvc.Data
                 Topic = "In-Memory Data Storage and CRUD Operations",
                 Explanation = "A duplicate assignment risks inconsistent/duplicate records - a data integrity concern."
             });
-            // SEED_MARKER
         }
 
         public IReadOnlyList<Question> GetAll() => _questions.OrderBy(q => q.Number).ToList();
