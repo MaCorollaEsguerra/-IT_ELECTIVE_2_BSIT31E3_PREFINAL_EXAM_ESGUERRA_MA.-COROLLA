@@ -223,6 +223,22 @@ namespace ExamMvc.Data
                 Topic = "Data Validation and ModelState",
                 Explanation = "Client-side validation runs in the browser (e.g. via JavaScript) before the form is submitted."
             });
+            Add(new Question
+            {
+                Number = 14,
+                Text = "Why is server-side validation still necessary if client-side validation exists?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "Client-side validation can be bypassed",
+                        ["B"] = "Client-side validation automatically modifies the database",
+                        ["C"] = "Server-side validation only works with SQLite",
+                        ["D"] = "Client-side validation cannot display messages"
+                },
+                SelectedAnswer = "A",
+                CorrectAnswer = "A",
+                Topic = "Data Validation and ModelState",
+                Explanation = "Client-side checks can be disabled or bypassed, so the server must re-validate every request."
+            });
             // SEED_MARKER
         }
 
