@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - IT Elective 2 Prefinal Answer Sheet</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="exam-header">
+        <div class="exam-header__badge">CCS</div>
+        <div class="exam-header__text">
+            <h1>IT Elective 2 &mdash; Web System and Technologies</h1>
+            <p>Prefinal Examination Answer Sheet &middot; 1st Semester, A.Y. 2026-2027</p>
+        </div>
+        <nav class="exam-header__nav">
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="Exam" asp-action="Index">Answer Sheet</a>
+        </nav>
+    </header>
+
+    <main class="exam-main">
+        @RenderBody()
+    </main>
+
+    <footer class="exam-footer">
+        <p>Built with ASP.NET Core MVC &middot; No database used &middot; In-memory answers only</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,180 @@
+:root {
+    --paper: #fdfaf1;
+    --ink: #1f2933;
+    --accent: #b3382c;
+    --accent-soft: #f6e2c4;
+    --correct: #2f7a4f;
+    --wrong: #b3382c;
+    --line: #d8cfb8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: repeating-linear-gradient(var(--paper), var(--paper) 31px, var(--line) 32px);
+    color: var(--ink);
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.5;
+}
+
+.exam-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 2rem;
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.exam-header__badge {
+    background: var(--accent);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    border-radius: 50%;
+    border: 3px double var(--accent-soft);
+}
+
+.exam-header__text h1 { margin: 0; font-size: 1.15rem; }
+.exam-header__text p { margin: 0.15rem 0 0; font-size: 0.85rem; opacity: 0.8; }
+
+.exam-header__nav { margin-left: auto; display: flex; gap: 1rem; }
+.exam-header__nav a { color: var(--paper); text-decoration: none; border-bottom: 1px dashed var(--paper); }
+
+.exam-main { max-width: 960px; margin: 0 auto; padding: 2rem; }
+
+.hero {
+    background: var(--accent-soft);
+    border: 2px dashed var(--accent);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.1rem;
+    border-radius: 3px;
+}
+
+.hint-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.hint-card {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.sheet-summary { margin-bottom: 1rem; }
+
+.answer-grid { display: grid; gap: 0.75rem; }
+
+.answer-card {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    border: 1px solid var(--line);
+    border-left: 6px solid var(--wrong);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--ink);
+    border-radius: 3px;
+}
+
+.answer-card--correct { border-left-color: var(--correct); }
+
+.answer-card__number {
+    font-weight: bold;
+    background: var(--accent-soft);
+    border-radius: 50%;
+    width: 2.5rem; height: 2.5rem;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.answer-card__shade { display: flex; gap: 0.35rem; }
+
+.bubble {
+    width: 1.6rem; height: 1.6rem;
+    border: 1px solid var(--ink);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem;
+}
+
+.bubble--shaded { background: var(--ink); color: var(--paper); }
+
+.back-link { text-decoration: none; color: var(--accent); }
+
+.detail-card {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+}
+
+.detail-card__topic {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+}
+
+.choice-list { list-style: none; padding: 0; }
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.choice--correct { border-color: var(--correct); background: #eef7f0; }
+.choice--picked-wrong { border-color: var(--wrong); background: #fbebe9; }
+
+.choice__letter {
+    font-weight: bold;
+    width: 1.75rem; height: 1.75rem;
+    border-radius: 50%;
+    border: 1px solid var(--ink);
+    display: flex; align-items: center; justify-content: center;
+}
+
+.choice__tag {
+    margin-left: auto;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+}
+
+.choice__tag--correct { background: var(--correct); }
+
+.detail-card__explanation { margin-top: 1rem; }
+
+.detail-nav { display: flex; justify-content: space-between; margin-top: 1.5rem; }
+.detail-nav a { text-decoration: none; color: var(--accent); }
+
+.exam-footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}

@@ -1,0 +1,26 @@
+@model IReadOnlyList<Question>
+@{
+    ViewData["Title"] = "Answer Sheet";
+}
+
+<section class="sheet-summary">
+    <h2>My Answer Sheet</h2>
+    <p>@ViewBag.TotalCorrect / @ViewBag.TotalItems items answered correctly.</p>
+</section>
+
+<div class="answer-grid">
+    @foreach (var q in Model)
+    {
+        <a class="answer-card @(q.IsCorrect ? "answer-card--correct" : "answer-card--wrong")"
+           asp-controller="Exam" asp-action="Details" asp-route-id="@q.Number">
+            <span class="answer-card__number">@q.Number</span>
+            <span class="answer-card__question">@q.Text</span>
+            <span class="answer-card__shade">
+                @foreach (var choice in q.Choices.Keys)
+                {
+                    <span class="bubble @(choice == q.SelectedAnswer ? "bubble--shaded" : "")">@choice</span>
+                }
+            </span>
+        </a>
+    }
+</div>

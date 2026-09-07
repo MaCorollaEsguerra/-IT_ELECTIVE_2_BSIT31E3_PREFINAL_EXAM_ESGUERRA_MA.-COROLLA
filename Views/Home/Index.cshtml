@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero">
+    <h2>Welcome to my Prefinal Exam Answer Sheet</h2>
+    <p>
+        This little ASP.NET Core MVC app is my "bluebook" for the IT Elective 2
+        (Web System and Technologies) Prefinal Examination. Every item from the
+        exam is modeled as a <code>Question</code>, held in an in-memory
+        repository (no database, as required), and rendered through a
+        Controller + Razor View pair &mdash; the M, V, and C of MVC.
+    </p>
+    <a class="btn" asp-controller="Exam" asp-action="Index">View my Answer Sheet &rarr;</a>
+</section>
+
+<section class="hint-grid">
+    <div class="hint-card">
+        <h3>Model</h3>
+        <p><code>Models/Question.cs</code> defines what one exam item looks like: its text, choices, my selected answer, and the correct answer.</p>
+    </div>
+    <div class="hint-card">
+        <h3>View</h3>
+        <p><code>Views/Exam/*.cshtml</code> render the questions as an interactive, shaded answer sheet.</p>
+    </div>
+    <div class="hint-card">
+        <h3>Controller</h3>
+        <p><code>Controllers/ExamController.cs</code> pulls questions from the in-memory <code>QuestionRepository</code> and hands them to the views.</p>
+    </div>
+</section>

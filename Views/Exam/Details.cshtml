@@ -1,0 +1,44 @@
+@model Question
+@{
+    ViewData["Title"] = $"Item {Model.Number}";
+}
+
+<a class="back-link" asp-controller="Exam" asp-action="Index">&larr; Back to Answer Sheet</a>
+
+<article class="detail-card">
+    <p class="detail-card__topic">@Model.Topic</p>
+    <h2>@Model.Number. @Model.Text</h2>
+
+    <ul class="choice-list">
+        @foreach (var choice in Model.Choices)
+        {
+            var isSelected = choice.Key == Model.SelectedAnswer;
+            var isCorrect = choice.Key == Model.CorrectAnswer;
+            <li class="choice @(isCorrect ? "choice--correct" : "") @(isSelected && !isCorrect ? "choice--picked-wrong" : "")">
+                <span class="choice__letter">@choice.Key</span>
+                <span class="choice__text">@choice.Value</span>
+                @if (isSelected)
+                {
+                    <span class="choice__tag">my answer</span>
+                }
+                @if (isCorrect)
+                {
+                    <span class="choice__tag choice__tag--correct">correct</span>
+                }
+            </li>
+        }
+    </ul>
+
+    <p class="detail-card__explanation"><strong>Why:</strong> @Model.Explanation</p>
+
+    <div class="detail-nav">
+        @if (Model.Number > 1)
+        {
+            <a asp-controller="Exam" asp-action="Details" asp-route-id="@(Model.Number - 1)">&larr; Item @(Model.Number - 1)</a>
+        }
+        @if (Model.Number < 20)
+        {
+            <a asp-controller="Exam" asp-action="Details" asp-route-id="@(Model.Number + 1)">Item @(Model.Number + 1) &rarr;</a>
+        }
+    </div>
+</article>
