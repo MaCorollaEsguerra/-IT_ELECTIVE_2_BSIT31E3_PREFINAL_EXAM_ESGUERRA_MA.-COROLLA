@@ -47,6 +47,22 @@ namespace ExamMvc.Data
                 Topic = "Relational Data Modeling",
                 Explanation = "Database-First reverse-engineers an existing schema into C# entity classes."
             });
+            Add(new Question
+            {
+                Number = 3,
+                Text = "What is the primary purpose of Entity Framework Core?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "To create HTML pages automatically",
+                        ["B"] = "To replace the MVC Controller",
+                        ["C"] = "To map objects in code to relational database data",
+                        ["D"] = "To replace the C# compiler"
+                },
+                SelectedAnswer = "C",
+                CorrectAnswer = "C",
+                Topic = "Relational Data Modeling",
+                Explanation = "EF Core is an ORM: it maps C# objects to rows in a relational database."
+            });
             // SEED_MARKER
         }
 
