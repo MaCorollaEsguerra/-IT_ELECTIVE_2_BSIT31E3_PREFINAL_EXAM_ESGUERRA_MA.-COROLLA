@@ -95,6 +95,22 @@ namespace ExamMvc.Data
                 Topic = "Model Binding and Controller Actions",
                 Explanation = "The `dbcontext scaffold` command reverse-engineers an existing database into EF Core model classes."
             });
+            Add(new Question
+            {
+                Number = 6,
+                Text = "Where is a database connection string commonly stored in an ASP.NET Core MVC application?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "Program.cs only",
+                        ["B"] = "appsettings.json",
+                        ["C"] = "Index.cshtml",
+                        ["D"] = "Student.cs"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "Conceptual Data Architecture",
+                Explanation = "Connection strings live in configuration (appsettings.json), not hard-coded in a view or model."
+            });
             // SEED_MARKER
         }
 
