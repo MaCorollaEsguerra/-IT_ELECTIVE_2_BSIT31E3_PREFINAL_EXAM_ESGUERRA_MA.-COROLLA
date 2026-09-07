@@ -271,6 +271,22 @@ namespace ExamMvc.Data
                 Topic = "Introduction to SQL",
                 Explanation = "A DB-level constraint is the last line of defense, guaranteeing integrity regardless of app-layer bugs."
             });
+            Add(new Question
+            {
+                Number = 17,
+                Text = "What is the purpose of a try...catch block in a controller?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "To create navigation properties",
+                        ["B"] = "To catch and handle exceptions that may occur during execution",
+                        ["C"] = "To generate database tables",
+                        ["D"] = "To perform client-side validation"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "Introduction to SQL",
+                Explanation = "try...catch lets a controller gracefully handle runtime errors instead of crashing the request."
+            });
             // SEED_MARKER
         }
 
