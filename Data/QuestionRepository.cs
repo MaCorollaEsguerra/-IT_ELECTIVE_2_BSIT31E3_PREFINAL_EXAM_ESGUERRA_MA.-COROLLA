@@ -255,6 +255,22 @@ namespace ExamMvc.Data
                 Topic = "Data Validation and ModelState",
                 Explanation = "The business rule directly maps to a uniqueness constraint on Student Number."
             });
+            Add(new Question
+            {
+                Number = 16,
+                Text = "Which is the best reason for having a database-level unique constraint on StudentNumber?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "It protects data integrity even if application-level validation is bypassed",
+                        ["B"] = "It makes Razor Views render faster",
+                        ["C"] = "It removes the need for a Controller",
+                        ["D"] = "It automatically creates a ViewModel"
+                },
+                SelectedAnswer = "A",
+                CorrectAnswer = "A",
+                Topic = "Introduction to SQL",
+                Explanation = "A DB-level constraint is the last line of defense, guaranteeing integrity regardless of app-layer bugs."
+            });
             // SEED_MARKER
         }
 
