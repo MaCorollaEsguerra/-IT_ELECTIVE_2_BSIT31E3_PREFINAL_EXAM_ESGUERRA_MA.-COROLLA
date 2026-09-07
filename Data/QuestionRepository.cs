@@ -175,6 +175,22 @@ namespace ExamMvc.Data
                 Topic = "Razor Syntax and Dynamic Rendering",
                 Explanation = "Include() eagerly loads a related navigation property in the same query."
             });
+            Add(new Question
+            {
+                Number = 11,
+                Text = "Why might a ViewModel be used when displaying Student and Section information?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "To replace the database",
+                        ["B"] = "To combine or shape the data specifically needed by the view",
+                        ["C"] = "To automatically create database tables",
+                        ["D"] = "To prevent controllers from using LINQ"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "Data Normalization & Structural Integrity",
+                Explanation = "A ViewModel tailors/combines entity data into exactly the shape a view needs, nothing more."
+            });
             // SEED_MARKER
         }
 
