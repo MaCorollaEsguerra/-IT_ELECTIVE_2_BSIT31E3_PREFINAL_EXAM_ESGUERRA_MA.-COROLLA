@@ -79,6 +79,22 @@ namespace ExamMvc.Data
                 Topic = "Relational Data Modeling",
                 Explanation = "DbContext manages the connection and change-tracking between entities and the database."
             });
+            Add(new Question
+            {
+                Number = 5,
+                Text = "What does the following command primarily do?\n\ndotnet ef dbcontext scaffold \"ConnectionString\" Microsoft.EntityFrameworkCore.SqlServer -o Models",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "Deletes the database",
+                        ["B"] = "Creates a new MVC project",
+                        ["C"] = "Generates EF Core models and a DbContext from an existing database",
+                        ["D"] = "Starts the MVC application"
+                },
+                SelectedAnswer = "C",
+                CorrectAnswer = "C",
+                Topic = "Model Binding and Controller Actions",
+                Explanation = "The `dbcontext scaffold` command reverse-engineers an existing database into EF Core model classes."
+            });
             // SEED_MARKER
         }
 
