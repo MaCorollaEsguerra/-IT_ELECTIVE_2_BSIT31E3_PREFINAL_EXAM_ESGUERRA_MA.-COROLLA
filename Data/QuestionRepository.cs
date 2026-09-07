@@ -111,6 +111,22 @@ namespace ExamMvc.Data
                 Topic = "Conceptual Data Architecture",
                 Explanation = "Connection strings live in configuration (appsettings.json), not hard-coded in a view or model."
             });
+            Add(new Question
+            {
+                Number = 7,
+                Text = "A Student belongs to exactly one Section, while a Section can contain many students. What type of relationship is this?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "One-to-One",
+                        ["B"] = "One-to-Many",
+                        ["C"] = "Many-to-Many",
+                        ["D"] = "Many-to-One only"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "Conceptual Data Architecture: Designing ERDs",
+                Explanation = "One Section has many Students, and each Student has one Section - a classic One-to-Many relationship."
+            });
             // SEED_MARKER
         }
 
