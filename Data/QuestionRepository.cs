@@ -207,6 +207,22 @@ namespace ExamMvc.Data
                 Topic = "Data Normalization & Structural Integrity",
                 Explanation = "Include(s => s.Section) tells EF Core to eager-load each Student's related Section in the same query."
             });
+            Add(new Question
+            {
+                Number = 13,
+                Text = "Which type of validation occurs in the browser before a request is sent to the server?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "Database-level validation",
+                        ["B"] = "Client-side validation",
+                        ["C"] = "Server-side validation",
+                        ["D"] = "EF Core migration validation"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "Data Validation and ModelState",
+                Explanation = "Client-side validation runs in the browser (e.g. via JavaScript) before the form is submitted."
+            });
             // SEED_MARKER
         }
 
