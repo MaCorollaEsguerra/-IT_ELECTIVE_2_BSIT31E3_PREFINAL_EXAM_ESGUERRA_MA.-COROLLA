@@ -63,6 +63,22 @@ namespace ExamMvc.Data
                 Topic = "Relational Data Modeling",
                 Explanation = "EF Core is an ORM: it maps C# objects to rows in a relational database."
             });
+            Add(new Question
+            {
+                Number = 4,
+                Text = "Which EF Core component is primarily responsible for communicating with the database?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "DbContext",
+                        ["B"] = "DbSetView",
+                        ["C"] = "ControllerContext",
+                        ["D"] = "RazorContext"
+                },
+                SelectedAnswer = "A",
+                CorrectAnswer = "A",
+                Topic = "Relational Data Modeling",
+                Explanation = "DbContext manages the connection and change-tracking between entities and the database."
+            });
             // SEED_MARKER
         }
 
