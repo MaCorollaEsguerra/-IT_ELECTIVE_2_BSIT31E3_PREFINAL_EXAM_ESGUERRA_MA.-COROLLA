@@ -303,6 +303,22 @@ namespace ExamMvc.Data
                 Topic = "In-Memory Data Storage and CRUD Operations",
                 Explanation = "UseExceptionHandler() routes unhandled exceptions to a single error-handling pipeline/page."
             });
+            Add(new Question
+            {
+                Number = 19,
+                Text = "A user requests /Student/999, but Student 999 does not exist. What would be the most appropriate response?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "Display the student's information anyway",
+                        ["B"] = "Display a Not Found (404) response/page",
+                        ["C"] = "Delete Student 999",
+                        ["D"] = "Create Student 999 automatically"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "In-Memory Data Storage and CRUD Operations",
+                Explanation = "A missing resource should correctly return an HTTP 404 Not Found response."
+            });
             // SEED_MARKER
         }
 
