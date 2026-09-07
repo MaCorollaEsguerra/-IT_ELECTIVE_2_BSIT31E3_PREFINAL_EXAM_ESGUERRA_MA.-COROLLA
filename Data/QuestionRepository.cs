@@ -239,6 +239,22 @@ namespace ExamMvc.Data
                 Topic = "Data Validation and ModelState",
                 Explanation = "Client-side checks can be disabled or bypassed, so the server must re-validate every request."
             });
+            Add(new Question
+            {
+                Number = 15,
+                Text = "A school requires every student to have a unique Student Number. Which rule best represents this requirement?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "Student Number should always be nullable",
+                        ["B"] = "Student Number should be unique",
+                        ["C"] = "Student Number should always be the same",
+                        ["D"] = "Student Number should contain only spaces"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "Data Validation and ModelState",
+                Explanation = "The business rule directly maps to a uniqueness constraint on Student Number."
+            });
             // SEED_MARKER
         }
 
