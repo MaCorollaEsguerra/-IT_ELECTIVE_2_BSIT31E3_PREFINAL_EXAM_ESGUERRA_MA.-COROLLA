@@ -127,6 +127,22 @@ namespace ExamMvc.Data
                 Topic = "Conceptual Data Architecture: Designing ERDs",
                 Explanation = "One Section has many Students, and each Student has one Section - a classic One-to-Many relationship."
             });
+            Add(new Question
+            {
+                Number = 8,
+                Text = "In the following example, what is SectionId?\n\npublic int SectionId { get; set; }\npublic Section Section { get; set; }",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "Primary key of Student",
+                        ["B"] = "Foreign key referencing Section",
+                        ["C"] = "Navigation property",
+                        ["D"] = "Database connection string"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "Conceptual Data Architecture: Designing ERDs",
+                Explanation = "SectionId is the shadow/explicit foreign key that points back to the related Section row."
+            });
             // SEED_MARKER
         }
 
