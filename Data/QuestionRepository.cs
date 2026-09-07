@@ -31,6 +31,22 @@ namespace ExamMvc.Data
                 Topic = "Relational Data Modeling",
                 Explanation = "In-memory collections disappear when the app stops; a database keeps the data around after that."
             });
+            Add(new Question
+            {
+                Number = 2,
+                Text = "Which approach is being used when an existing database is used to generate EF Core entity classes?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "Code-First",
+                        ["B"] = "Database-First",
+                        ["C"] = "Model-First",
+                        ["D"] = "Controller-First"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "Relational Data Modeling",
+                Explanation = "Database-First reverse-engineers an existing schema into C# entity classes."
+            });
             // SEED_MARKER
         }
 
