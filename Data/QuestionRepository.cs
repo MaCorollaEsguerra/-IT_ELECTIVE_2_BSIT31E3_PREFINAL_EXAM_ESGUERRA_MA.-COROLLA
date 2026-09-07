@@ -319,6 +319,22 @@ namespace ExamMvc.Data
                 Topic = "In-Memory Data Storage and CRUD Operations",
                 Explanation = "A missing resource should correctly return an HTTP 404 Not Found response."
             });
+            Add(new Question
+            {
+                Number = 20,
+                Text = "A student already belongs to Section A for a particular subject. The application attempts to assign the same student to Section A again. What is the primary concern?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "Data integrity",
+                        ["B"] = "HTML formatting",
+                        ["C"] = "CSS inheritance",
+                        ["D"] = "Razor syntax"
+                },
+                SelectedAnswer = "A",
+                CorrectAnswer = "A",
+                Topic = "In-Memory Data Storage and CRUD Operations",
+                Explanation = "A duplicate assignment risks inconsistent/duplicate records - a data integrity concern."
+            });
             // SEED_MARKER
         }
 
