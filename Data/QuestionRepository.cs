@@ -287,6 +287,22 @@ namespace ExamMvc.Data
                 Topic = "Introduction to SQL",
                 Explanation = "try...catch lets a controller gracefully handle runtime errors instead of crashing the request."
             });
+            Add(new Question
+            {
+                Number = 18,
+                Text = "Which middleware is commonly used in ASP.NET Core for centralized exception handling?",
+                Choices = new Dictionary<string, string>
+                {
+                        ["A"] = "UseDatabase()",
+                        ["B"] = "UseExceptionHandler()",
+                        ["C"] = "UseValidationHandler()",
+                        ["D"] = "UseMvcDatabase()"
+                },
+                SelectedAnswer = "B",
+                CorrectAnswer = "B",
+                Topic = "In-Memory Data Storage and CRUD Operations",
+                Explanation = "UseExceptionHandler() routes unhandled exceptions to a single error-handling pipeline/page."
+            });
             // SEED_MARKER
         }
 
